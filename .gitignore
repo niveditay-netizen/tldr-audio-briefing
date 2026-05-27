@@ -1,0 +1,47 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Service account JSON (NEVER commit)
+*service-account*.json
+*credentials*.json
+*secret*.json
+
+# Temporary files
+/tmp/
+*.tmp
+*.log
+*.pid
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Generated audio/briefing files (for testing)
+/tmp/tldr_summary.txt
+/tmp/tldr_today.mp3
+*.mp3
+
+# Local testing scripts (if you create them)
+test_*.py
+local_*.sh
+
+# OS
+Thumbs.db
+.AppleDouble
+.LSOverride

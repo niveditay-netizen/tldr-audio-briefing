@@ -1,0 +1,76 @@
+{
+  "kind": "storage#bucket",
+  "id": "tldr-audio-briefings",
+  "projectNumber": "YOUR_PROJECT_NUMBER",
+  "name": "tldr-audio-briefings",
+  "timeCreated": "2026-01-01T00:00:00Z",
+  "updated": "2026-05-27T12:00:00Z",
+  "metageneration": "3",
+  "location": "US-CENTRAL1",
+  "storageClass": "STANDARD",
+  "defaultEventBasedHold": false,
+  "versioning": {
+    "enabled": false
+  },
+  "lifecycle": {
+    "rule": [
+      {
+        "action": {
+          "type": "Delete"
+        },
+        "condition": {
+          "age": 90,
+          "matchesPrefix": [
+            "tldr_"
+          ]
+        }
+      }
+    ]
+  },
+  "cors": [],
+  "iamConfiguration": {
+    "bucketPolicyOnly": {
+      "enabled": false
+    },
+    "uniformBucketLevelAccess": {
+      "enabled": false
+    },
+    "publicAccessPrevention": "inherited"
+  },
+  "defaultObjectAcl": [
+    {
+      "kind": "storage#objectAccessControl",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/tldr-audio-briefings/defaultObjectAcl/user-tldr-account",
+      "bucket": "tldr-audio-briefings",
+      "entity": "user-tldr-account@tldr-briefing-491917.iam.gserviceaccount.com",
+      "role": "OWNER"
+    }
+  ],
+  "acl": [
+    {
+      "kind": "storage#bucketAccessControl",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/tldr-audio-briefings/acl/user-tldr-account",
+      "bucket": "tldr-audio-briefings",
+      "entity": "user-tldr-account@tldr-briefing-491917.iam.gserviceaccount.com",
+      "role": "OWNER"
+    },
+    {
+      "kind": "storage#bucketAccessControl",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/tldr-audio-briefings/acl/project-owners",
+      "bucket": "tldr-audio-briefings",
+      "entity": "project-owners-YOUR_PROJECT_NUMBER",
+      "role": "OWNER"
+    },
+    {
+      "kind": "storage#bucketAccessControl",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/tldr-audio-briefings/acl/project-editors",
+      "bucket": "tldr-audio-briefings",
+      "entity": "project-editors-YOUR_PROJECT_NUMBER",
+      "role": "EDITOR"
+    }
+  ],
+  "labels": {
+    "project": "tldr-briefing",
+    "purpose": "audio-briefing-storage"
+  }
+}
