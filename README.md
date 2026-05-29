@@ -224,6 +224,3 @@ MIT License – see LICENSE file
 - [ ] Custom briefing topics (e.g., AI-only, startup-only)
 - [ ] Email delivery of briefing transcript
 
-## Contact
-
-Questions? Reach out on [Twitter](https://twitter.com/yourhandle) or open a GitHub issue.
